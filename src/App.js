@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+// mariaDB connect
+const maria = require('./database/connect/maria');
+maria.connect();
+
 function App() {
   return (
     <div className="App">
