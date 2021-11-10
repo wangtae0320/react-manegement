@@ -1,30 +1,21 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Customer from './component/Customer';
 import './App.css';
 
+const customer = {
+  'name' : '김기명',
+  'birthday' : '910320'
+}
 
-// mariaDB connect
-const maria = require('./database/connect/maria');
-maria.connect();
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React hihih
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Customer
+        name={customer.name}
+        birthday={customer.birthday}
+      />
+    );
+  }
 }
 
 export default App;
