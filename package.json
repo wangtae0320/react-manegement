@@ -11,7 +11,9 @@
         "css-loader": "^6.5.1",
         "express": "4.17.1",
         "express-session": "^1.17.2",
-        "style-loader": "^3.3.1"
+        "mysql": "^2.18.1",
+        "style-loader": "^3.3.1",
+        "webpack": "^4.44.2"
     },
     "devDependencies": {
         "concurrently": "^4.0.1"
