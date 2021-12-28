@@ -36,8 +36,17 @@ class CustomerAdd extends React.Component {
         e.preventDefault()
         this.addCustomer()
             .then((response) => {
-                console.log(response.data)
+                console.log(response.data);
+                this.props.stateRefresh();
             })
+        this.setState({ 
+            file: null,
+            userName: '',
+            birthday: '',
+            gender:'', 
+            job: '',
+            fileName: ''
+        })  
     }
 
     handleFileChange = (e) => {
